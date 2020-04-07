@@ -1,0 +1,16 @@
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 100% !important;
+    }        
+}
+.container{
+    margin: 2px;
+    padding: 2px;   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    color: #030063 !important;
+    background-color:#03fff2; 
+    margin: auto;
+    text-align: center;    
+}

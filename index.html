@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOWNTIME MANAGEMENT</title>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.4.1-dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="test-form"
+            action="https://script.google.com/macros/s/AKfycbwqmxYURqzJYdI_Mfw434Rg2BdJ8pG60gpNb5f-9Wju2EgLLUOq/exec"
+            method="GET">
+            <h1>DOWNTIME MANAGEMENT</h1>
+            <!-- Nhập ID -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">MSNV/Operator ID</label>
+                    <input type="text" class="form-control" name="Msnv" id="" aria-describedby="helpId"
+                        placeholder="Nhập ID">
+                </div>
+            </div>
+            <!-- Nhập line -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Tên Chuyền/Line</label>
+                    <input type="text" class="form-control" name="Line" id="" aria-describedby="helpId"
+                        placeholder="Nhập số chuyền">
+                </div>
+            </div>
+            <!-- Nhập STT máy -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Số thứ tự máy/MC #ID</label>
+                    <input type="text" class="form-control" name="Machine_id" id="" aria-describedby="helpId"
+                        placeholder="Nhập số thứ tự">
+                </div>
+            </div>
+            <!-- Nhập Thời gian bắt đầu -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Bắt đầu/Start (Vd: 10:25 AM)</label>
+                    <input type="time" class="form-control" name="Start" id="start" aria-describedby="helpId"
+                        placeholder="Nhập giờ bắt đầu">
+                </div>
+            </div>
+            <!-- Nhập Thời gian kết thúc -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Kết thúc/End (Vd: 10:50 AM)</label>
+                    <input type="time" class="form-control" name="End" id="" aria-describedby="helpId"
+                        placeholder="Nhập giờ kết thúc">
+                </div>
+            </div>
+            <!-- Nhập loại lỗi -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Loại lỗi/Problem</label>
+                    <input type="text" class="form-control" name="Issue" id="" aria-describedby="helpId"
+                        placeholder="Nhập loại lỗi">
+                </div>
+            </div>
+            <!-- Submit -->
+            <div class="row">
+                <button type="submit" id="btn"><i class="fas fa-cloud-upload-alt" style="font-size:15px ;"></i> Cập
+                    Nhật</button>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+
+</body>
+
+</html>
