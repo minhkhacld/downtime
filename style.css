@@ -1,16 +1,35 @@
 @media only screen and (max-width: 400px) {
     .container {
         width: 100% !important;
+        margin: 5px !important;
     }        
 }
 .container{
     margin: 2px;
     padding: 2px;   
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
 }
 h1{
-    color: #030063 !important;
-    background-color:#03fff2; 
-    margin: auto;
+    color: #030063 !important;    
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+    
     text-align: center;    
+    border: 1px solid black;
+    height: 60px;
+    font-size: 25px !important;
+    font-weight: bold !important;
+    line-height: 60px !important;
+}
+img{
+    height: 50px;
+    float: left;
+    /* margin-left: 200px; */
+    line-height: 50px;
+    border: 1px solid black;
+    object-fit: contain;
+}
+.header{
+    margin-bottom: 100px !important;
 }

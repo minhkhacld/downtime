@@ -23,6 +23,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
+        <link href="/open-iconic/font/css/open-iconic.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,7 +31,10 @@
         <form id="test-form"
             action="https://script.google.com/macros/s/AKfycbwqmxYURqzJYdI_Mfw434Rg2BdJ8pG60gpNb5f-9Wju2EgLLUOq/exec"
             method="GET">
-            <h1>DOWNTIME MANAGEMENT</h1>
+            <div class="row" class="header">
+                <h1><img src="/picture/pg.png" alt="PG logo">DOWNTIME MANAGEMENT</h1>
+            </div>
+
             <!-- Nhập ID -->
             <div class="row">
                 <div class="form-group">
@@ -81,8 +85,7 @@
             </div>
             <!-- Submit -->
             <div class="row">
-                <button type="submit" id="btn"><i class="fas fa-cloud-upload-alt" style="font-size:15px ;"></i> Cập
-                    Nhật</button>
+                <button type="submit" id="btn">Cập Nhật</button>
             </div>
         </form>
     </div>
