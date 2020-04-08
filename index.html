@@ -40,7 +40,7 @@
             <!-- Nhập ID -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">MSNV/Operator ID</label>
+                    <label for="">MSNV/Mechanic ID</label>
                     <input type="text" class="form-control" name="Msnv" id="" aria-describedby="helpId"
                         placeholder="Nhập ID">
                 </div>
@@ -89,21 +89,26 @@
             <div class="row">
                 <button type="submit" id="btn" class="btn">Cập Nhật</button>
             </div>
-
-            <iframe
-                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9dWBrQmFL_6CaSW7AKcqTyvm4vdY0ivvlPG4k3HJ26nnlONarzK6EKjc9mEQu3p9antQKlIZwdo6v/pubhtml?widget=true&amp;headers=false"></iframe>
-           
+            <div class="row">
+                <iframe id="iframe"
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9dWBrQmFL_6CaSW7AKcqTyvm4vdY0ivvlPG4k3HJ26nnlONarzK6EKjc9mEQu3p9antQKlIZwdo6v/pubhtml?widget=true&amp;headers=false"></iframe>
+            </div>
             <div class="row">
                 <h6><i class="fas fa-user-tie" style="margin: 5px 3px; color:white;font-size: 13px;"></i>IE.Khapham <i
-                    class="fas fa-phone" style="margin: 5px 3px; color:white;font-size: 13px;"></i> 0355210716 <i
-                    class="far fa-envelope" style="margin: 5px 3px; color:white; font-size: 13px;"></i>pmkha92@gmail.com
-                                    </h6>
-            </div>             
+                        class="fas fa-phone" style="margin: 5px 3px; color:white;font-size: 13px;"></i> 0355210716 <i
+                        class="far fa-envelope"
+                        style="margin: 5px 3px; color:white; font-size: 13px;"></i>pmkha92@gmail.com
+                </h6>
+            </div>
         </form>
     </div>
-<!-- 
-    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script> -->
-
+    <!-- <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script> --> 
+    <!-- <script> 
+        function reload() { 
+            document.getElementById('iframe').src += ''; 
+        } 
+        btn.onclick = reload; 
+    </script>  -->
 </body>
 
 </html>
