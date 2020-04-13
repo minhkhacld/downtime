@@ -30,7 +30,7 @@
 
 <body>
     <div class="container">
-        <form id="test-form"
+        <form id="test-form" name="myForm"
             action="https://script.google.com/macros/s/AKfycbwqmxYURqzJYdI_Mfw434Rg2BdJ8pG60gpNb5f-9Wju2EgLLUOq/exec"
             method="GET">
             <div class="row" class="header">
@@ -42,7 +42,7 @@
             <div class="row">
                 <div class="form-group">
                     <label for="">MSNV/Mechanic ID</label>
-                    <input type="text" class="form-control" name="Msnv" id="" aria-describedby="helpId"
+                    <input type="text" class="form-control" name="Msnv" id="msnv" aria-describedby="helpId"
                         placeholder="Nhập ID">
                 </div>
             </div>
@@ -50,7 +50,7 @@
             <div class="row">
                 <div class="form-group">
                     <label for="">Tên Chuyền/Line</label>
-                    <input type="text" class="form-control" name="Line" id="" aria-describedby="helpId"
+                    <input type="text" class="form-control" name="Line" id="line" aria-describedby="helpId"
                         placeholder="Nhập số chuyền">
                 </div>
             </div>
@@ -58,7 +58,7 @@
             <div class="row">
                 <div class="form-group">
                     <label for="">Số thứ tự máy/MC #ID</label>
-                    <input type="text" class="form-control" name="Machine_id" id="" aria-describedby="helpId"
+                    <input type="text" class="form-control" name="Machine_id" id="mc_id" aria-describedby="helpId"
                         placeholder="Nhập số thứ tự">
                 </div>
             </div>
@@ -74,7 +74,7 @@
             <div class="row">
                 <div class="form-group">
                     <label for="">Kết thúc/End (Vd: 10:50 AM)</label>
-                    <input type="time" class="form-control" name="End" id="" aria-describedby="helpId"
+                    <input type="time" class="form-control" name="End" id="end" aria-describedby="helpId"
                         placeholder="Nhập giờ kết thúc">
                 </div>
             </div>
@@ -89,7 +89,8 @@
             <div class="row">
                 <div class="form-group">
                     <label for="">Loại lỗi/Problem</label>
-                    <select class="form-control" name="Issue" id="">                       
+                    <select class="form-control" name="Issue" id="defect">
+                        <option value="">Chọn vấn đề</option>
                         <option value="Bỏ mũi/Skip stitch">1. Bỏ mũi/Skip stitch</option>
                         <option value="Đức chỉ/Broken stitch">2. Đức chỉ/Broken stitch</option>
                         <option value="Gãy kim/Broken needle">3. Gãy kim/Broken needle</option>
@@ -103,6 +104,13 @@
                         <option value="Bể vải/Hole">11. Bể vải/Hole</option>
                         <option value="Dơ/Stain">12. Dơ/Stain</option>
                     </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Vấn đề cho máy khác không phải máy may</label>
+                    <textarea class="form-control" name="Others" id="" rows="3"
+                        placeholder="Nhập vấn đề khác"></textarea>                    
                 </div>
             </div>
             <!-- Submit -->
@@ -122,13 +130,15 @@
             </div>
         </form>
     </div>
-    <!-- <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script> -->
-    <!-- <script> 
-        function reload() { 
-            document.getElementById('iframe').src += ''; 
-        } 
-        btn.onclick = reload; 
-    </script>  -->
+    <script>
+        // defect.onchange = () => {
+        //     var others = document.getElementById("defect").value;
+        //     console.log(others)
+        //     if (others = "Vấn đề khác/Others") {
+        //         document.getElementById("others").style.display = "block";
+        //     }
+        // }
+    </script>
 </body>
 
 </html>
