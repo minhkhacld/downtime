@@ -102,12 +102,13 @@ a {
   .container-fluid {
     /* position: -webkit-sticky; */
     position: sticky !important;
-    top: 0;    
+    top: 0;      
+    width: 100%;  
   }
   @media only screen and (max-width: 400px) {
     .container {
         width: 100% !important;        
-        margin: 5px !important;
+        margin: 3px !important;
     }        
     h1{
         width: 100% !important;
@@ -116,8 +117,6 @@ a {
         width: 100% !important;
     }
     .container-fluid{
-        width: 100% !important;
-        display: inline-block !important; 
-        /* float: inline-end !important;       */
+        width: 100% !important;             
     }
 }
