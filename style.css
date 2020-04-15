@@ -83,7 +83,7 @@ a {
     float: left !important;
   }
 
-  li a {
+  /* li a {
     display: block;
     color: white;
     text-align: center;
@@ -99,9 +99,9 @@ a {
     background-color: #4CAF50;
   }
 
-  .container-fluid {
+  .container-fluid { */
     /* position: -webkit-sticky; */
-    position: sticky !important;
+    /* position: sticky !important;
     top: 0;      
     width: 100%;  
   }
@@ -119,4 +119,4 @@ a {
     .container-fluid{
         width: 100% !important;             
     }
-}
+} */
