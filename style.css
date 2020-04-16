@@ -61,6 +61,13 @@ h6{
     font-weight: bold !important;   
 }
 
+select{
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
 
 a {
     text-align: center;

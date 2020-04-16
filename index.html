@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,111 +38,192 @@
             </ul>
         </div> -->
 
-        <div class="container">
-            <form id="test-form" name="myForm"
-                action="https://script.google.com/macros/s/AKfycbwqmxYURqzJYdI_Mfw434Rg2BdJ8pG60gpNb5f-9Wju2EgLLUOq/exec"
-                method="GET">
-                <div class="row" class="header">
-                    <!-- <img src="https://drive.google.com/file/d/1A-G9-h-mUZru45yK-RfcCWzfpseIBX-S/view?usp=sharing" alt=""> -->
-                    <h1>DOWNTIME COLL APP</h1>
-                </div>
 
-                <!-- Nhập ID -->
-                <div class="row">
-                    <div class="form-group">
-                        <label for="">MSNV/Mechanic ID</label>
-                        <input type="text" class="form-control" name="Msnv" id="msnv" aria-describedby="helpId"
-                            placeholder="Nhập ID">
-                    </div>
+    <div class="container">
+
+        <div class="row" class="header">
+            <!-- <img src="https://drive.google.com/file/d/1A-G9-h-mUZru45yK-RfcCWzfpseIBX-S/view?usp=sharing" alt=""> -->
+            <h1>DOWNTIME COLL APP</h1>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label for="">Loại cập nhật</label>
+                <select class="form-control" name="" id="typeupdate" onchange="showDiv(this)">
+                    <option value="repair">Sửa máy/Fix Machine</option>
+                    <option value="schedule">Bảo trì định kỳ/Shedule Maintanance</option>
+                </select>
+            </div>
+        </div>
+
+        <form id="test-form" name="myForm"
+            action="https://script.google.com/macros/s/AKfycbwqmxYURqzJYdI_Mfw434Rg2BdJ8pG60gpNb5f-9Wju2EgLLUOq/exec"
+            method="GET">
+
+
+            <!-- Nhập ID -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">MSNV/Mechanic ID</label>
+                    <input type="text" class="form-control" name="Msnv" id="msnv" aria-describedby="helpId"
+                        placeholder="Nhập ID">
                 </div>
-                <!-- Nhập line -->
-                <div class="row">
-                    <div class="form-group">
-                        <label for="">Tên Chuyền/Line</label>
-                        <input type="text" class="form-control" name="Line" id="line" aria-describedby="helpId"
-                            placeholder="Nhập số chuyền">
-                    </div>
+            </div>
+            <!-- Nhập line -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Tên Chuyền/Line</label>
+                    <input type="text" class="form-control" name="Line" id="line" aria-describedby="helpId"
+                        placeholder="Nhập số chuyền">
                 </div>
-                <!-- Nhập STT máy -->
-                <div class="row">
-                    <div class="form-group">
-                        <label for="">Số thứ tự máy/MC #ID</label>
-                        <input type="text" class="form-control" name="Machine_id" id="mc_id" aria-describedby="helpId"
-                            placeholder="Nhập số thứ tự">
-                    </div>
+            </div>
+            <!-- Nhập STT máy -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Số thứ tự máy/MC #ID</label>
+                    <input type="text" class="form-control" name="Machine_id" id="mc_id" aria-describedby="helpId"
+                        placeholder="Nhập số thứ tự">
                 </div>
-                <!-- Nhập Thời gian bắt đầu -->
-                <div class="row">
-                    <div class="form-group">
-                        <label for="">Bắt đầu/Start (Vd: 10:25 AM)</label>
-                        <input type="time" class="form-control" name="Start" id="start" aria-describedby="helpId"
-                            placeholder="Nhập giờ bắt đầu">
-                    </div>
+            </div>
+            <!-- Nhập Thời gian bắt đầu -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Bắt đầu/Start (Vd: 10:25 AM)</label>
+                    <input type="time" class="form-control" name="Start" id="start" aria-describedby="helpId"
+                        placeholder="Nhập giờ bắt đầu">
                 </div>
-                <!-- Nhập Thời gian kết thúc -->
-                <div class="row">
-                    <div class="form-group">
-                        <label for="">Kết thúc/End (Vd: 10:50 AM)</label>
-                        <input type="time" class="form-control" name="End" id="end" aria-describedby="helpId"
-                            placeholder="Nhập giờ kết thúc">
-                    </div>
+            </div>
+            <!-- Nhập Thời gian kết thúc -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Kết thúc/End (Vd: 10:50 AM)</label>
+                    <input type="time" class="form-control" name="End" id="end" aria-describedby="helpId"
+                        placeholder="Nhập giờ kết thúc">
                 </div>
-                <!-- Nhập loại lỗi -->
-                <!-- <div class="row">
+            </div>
+            <!-- Nhập loại lỗi -->
+            <!-- <div class="row">
                 <div class="form-group">
                     <label for="">Loại lỗi/Problem</label>
                     <input type="text" class="form-control" name="Issue" id="" aria-describedby="helpId"
                         placeholder="Nhập loại lỗi">
                 </div>
             </div> -->
-                <div class="row">
-                    <div class="form-group">
-                        <label for="">Loại lỗi/Problem</label>
-                        <select class="form-control" name="Issue" id="defect">
-                            <option value="">Chọn vấn đề</option>
-                            <option value="Bỏ mũi/Skip stitch">1. Bỏ mũi/Skip stitch</option>
-                            <option value="Đức chỉ/Broken stitch">2. Đức chỉ/Broken stitch</option>
-                            <option value="Gãy kim/Broken needle">3. Gãy kim/Broken needle</option>
-                            <option value="Nhăn vải/Puckering">4. Nhăn vải/Puckering</option>
-                            <option value="Chỉnh bờ to nhỏ/Uneven seam">5. Chỉnh bờ to nhỏ/Uneven seam</option>
-                            <option value="Chỉnh giãn rút/Shink, Strech">6. Chỉnh giãn rút/Shink, Strech</option>
-                            <option value="Dán chân vịt/Fix presser foot">7. Dán chân vịt/Fix presser foot</option>
-                            <option value="Chỉnh thưa dầy chỉ/Thread tension">8. Chỉnh thưa dầy chỉ/Thread tension
-                            </option>
-                            <option value="Vệ sinh dầu/Oil cleanning">9. Vệ sinh dầu/Oil cleanning</option>
-                            <option value="Thay đổi thiết bị/Change parts">10. Thay đổi thiết bị/Change parts</option>
-                            <option value="Bể vải/Hole">11. Bể vải/Hole</option>
-                            <option value="Dơ/Stain">12. Dơ/Stain</option>
-                            <option value="Bảo trì định kỳ/Scheduled maintenance">13. Bảo trì định kỳ/Scheduled maintenance</option>
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Loại lỗi/Problem</label>
+                    <select class="form-control" name="Issue" id="defect">
+                        <option value="">Chọn vấn đề</option>
+                        <option value="Bỏ mũi/Skip stitch">1. Bỏ mũi/Skip stitch</option>
+                        <option value="Đức chỉ/Broken stitch">2. Đức chỉ/Broken stitch</option>
+                        <option value="Gãy kim/Broken needle">3. Gãy kim/Broken needle</option>
+                        <option value="Nhăn vải/Puckering">4. Nhăn vải/Puckering</option>
+                        <option value="Chỉnh bờ to nhỏ/Uneven seam">5. Chỉnh bờ to nhỏ/Uneven seam</option>
+                        <option value="Chỉnh giãn rút/Shink, Strech">6. Chỉnh giãn rút/Shink, Strech</option>
+                        <option value="Dán chân vịt/Fix presser foot">7. Dán chân vịt/Fix presser foot</option>
+                        <option value="Chỉnh thưa dầy chỉ/Thread tension">8. Chỉnh thưa dầy chỉ/Thread tension</option>
+                        <option value="Vệ sinh dầu/Oil cleanning">9. Vệ sinh dầu/Oil cleanning</option>
+                        <option value="Thay đổi thiết bị/Change parts">10. Thay đổi thiết bị/Change parts</option>
+                        <option value="Bể vải/Hole">11. Bể vải/Hole</option>
+                        <option value="Dơ/Stain">12. Dơ/Stain</option>                     
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Vấn đề cho máy khác không phải máy may</label>
+                    <textarea class="form-control" name="Others" id="" rows="3"
+                        placeholder="Nhập vấn đề khác"></textarea>
+                </div>
+            </div>
+            <!-- Submit -->
+            <div class="row">
+                <button type="submit" id="btn" class="btn">Cập Nhật</button>
+            </div>
+            <div class="row">
+                <iframe id="iframe"
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9dWBrQmFL_6CaSW7AKcqTyvm4vdY0ivvlPG4k3HJ26nnlONarzK6EKjc9mEQu3p9antQKlIZwdo6v/pubhtml?widget=true&amp;headers=false"></iframe>
+            </div>
+            
+        </form>
 
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group">
-                        <label for="">Vấn đề cho máy khác không phải máy may</label>
-                        <textarea class="form-control" name="Others" id="" rows="3"
-                            placeholder="Nhập vấn đề khác"></textarea>
-                    </div>
-                </div>
-                <!-- Submit -->
-                <div class="row">
-                    <button type="submit" id="btn" class="btn">Cập Nhật</button>
-                </div>
-                <div class="row">
-                    <iframe id="iframe"
-                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9dWBrQmFL_6CaSW7AKcqTyvm4vdY0ivvlPG4k3HJ26nnlONarzK6EKjc9mEQu3p9antQKlIZwdo6v/pubhtml?widget=true&amp;headers=false"></iframe>
-                </div>
-                <div class="row">
-                    <h6><i class="fas fa-user-tie" style="margin: 5px 3px; color:white;font-size: 13px;"></i>IE.Khapham
-                        <i class="fas fa-phone" style="margin: 5px 3px; color:white;font-size: 13px;"></i> 0355210716 <i
-                            class="far fa-envelope"
-                            style="margin: 5px 3px; color:white; font-size: 13px;"></i>pmkha92@gmail.com
-                    </h6>
-                </div>
-            </form>
-        </div>
 
+        <!-- Form Schedule Maintanance -->
+        <form action="https://script.google.com/macros/s/AKfycbz819Gq_V1E4_nmxH7HGtRxNepU_wl0kKqyQpMa24r6HJW979A/exec"
+            method="GET" id="formschedule" name="formschedule">
+            <!-- Nhập ID -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">MSNV/Mechanic ID</label>
+                    <input type="text" class="form-control" name="Msnv" id="msnv" aria-describedby="helpId"
+                        placeholder="Nhập ID">
+                </div>
+            </div>
+            <!-- Nhập line -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Tên Chuyền/Line</label>
+                    <input type="text" class="form-control" name="Line" id="line" aria-describedby="helpId"
+                        placeholder="Nhập số chuyền">
+                </div>
+            </div>
+            <!-- Nhập STT máy -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Số thứ tự máy/MC #ID</label>
+                    <input type="text" class="form-control" name="Machine_id" id="mc_id" aria-describedby="helpId"
+                        placeholder="Nhập số thứ tự">
+                </div>
+            </div>
+            <!-- Problem -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Loại kiểm tra/Type of checking</label>
+                    <select class="form-control" name="Issue" id="defect">
+                        <option value="">Chọn vấn đề</option>
+                        <option value="Kiểm tra ổ máy/Case checking">1. Kiểm tra ổ máy/Case checking</option>
+                        <option value="Kiểm tra bàn lừa/Feedog checking">2. Kiểm tra bàn lừa/Feedog checking</option>
+                        <option value="Kiểm tra trụ kim/Needle bar checking">3. Kiểm tra trụ kim/Needle bar checking</option>
+                        <option value="Kiểm tra mặt nguyệt/Haft moon checking">4. Kiểm tra mặt nguyệt/Haft moon checking</option>
+                        <option value="Kiểm tra vị trí dầu/Oil level checking">5. Kiểm tra vị trí dầu/Oil level checking</option>
+                        <option value="Kiểm tra dầu máy/Oil leak checking">6. Kiểm tra dầu máy/Oil leak checking</option>
+                        <option value="Kiểm tra mô tơ/Motor checking">7. Kiểm tra mô tơ/Motor checking</option>                      
+                    </select>
+                </div>
+            </div>
+            <!-- Remark -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Vấn đề cho máy khác không phải máy may</label>
+                    <textarea class="form-control" name="Others" id="" rows="3"
+                        placeholder="Nhập vấn đề khác"></textarea>
+                </div>
+            </div>
+            <!-- Submit -->
+            <div class="row">
+                <button type="submit" id="btn" class="btn">Cập Nhật</button>
+            </div>
+        </form>
+        <div class="row">
+                <h6><i class="fas fa-user-tie" style="margin: 5px 3px; color:white;font-size: 13px;"></i>IE.Khapham
+                    <i class="fas fa-phone" style="margin: 5px 3px; color:white;font-size: 13px;"></i> 0355210716 <i
+                        class="far fa-envelope"
+                        style="margin: 5px 3px; color:white; font-size: 13px;"></i>pmkha92@gmail.com
+                </h6>
+            </div>
+    </div>
+    <script type="text/javascript">
+        function showDiv(select) {
+            // var typeupdate = document.getElementById('typeupdate').value
+            // console.log(typeupdate)
+            if (select.value == "repair") {
+                document.getElementById('test-form').style.display = "block";
+                document.getElementById('formschedule').style.display = "none";
+            } else {
+                document.getElementById('formschedule').style.display = "block";
+                document.getElementById('test-form').style.display = "none";
+            }
+        } 
+    </script>
 </body>
-
 </html>
