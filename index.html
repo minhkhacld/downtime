@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +25,7 @@
         crossorigin="anonymous"></script>
     <link href="/open-iconic/font/css/open-iconic.css" rel="stylesheet">
     </style>
+
 </head>
 
 <body>
@@ -48,7 +50,7 @@
         <div class="row">
             <div class="form-group">
                 <label for="">Loại cập nhật</label>
-                <select class="form-control" name="" id="typeupdate" onchange="showDiv(this)">
+                <select class="form-control" name="" id="typeupdate" onchange="showDiv(this)" required>
                     <option value="repair">Sửa máy/Fix Machine</option>
                     <option value="schedule">Bảo trì định kỳ/Shedule Maintanance</option>
                 </select>
@@ -65,7 +67,7 @@
                 <div class="form-group">
                     <label for="">MSNV/Mechanic ID</label>
                     <input type="text" class="form-control" name="Msnv" id="msnv" aria-describedby="helpId"
-                        placeholder="Nhập ID">
+                        placeholder="Nhập ID" required>
                 </div>
             </div>
             <!-- Nhập line -->
@@ -73,7 +75,7 @@
                 <div class="form-group">
                     <label for="">Tên Chuyền/Line</label>
                     <input type="text" class="form-control" name="Line" id="line" aria-describedby="helpId"
-                        placeholder="Nhập số chuyền">
+                        placeholder="Nhập số chuyền" required>
                 </div>
             </div>
             <!-- Nhập STT máy -->
@@ -81,7 +83,7 @@
                 <div class="form-group">
                     <label for="">Số thứ tự máy/MC #ID</label>
                     <input type="text" class="form-control" name="Machine_id" id="mc_id" aria-describedby="helpId"
-                        placeholder="Nhập số thứ tự">
+                        placeholder="Nhập số thứ tự" required>
                 </div>
             </div>
             <!-- Nhập Thời gian bắt đầu -->
@@ -89,7 +91,7 @@
                 <div class="form-group">
                     <label for="">Bắt đầu/Start (Vd: 10:25 AM)</label>
                     <input type="time" class="form-control" name="Start" id="start" aria-describedby="helpId"
-                        placeholder="Nhập giờ bắt đầu">
+                        placeholder="Nhập giờ bắt đầu" required>
                 </div>
             </div>
             <!-- Nhập Thời gian kết thúc -->
@@ -97,7 +99,7 @@
                 <div class="form-group">
                     <label for="">Kết thúc/End (Vd: 10:50 AM)</label>
                     <input type="time" class="form-control" name="End" id="end" aria-describedby="helpId"
-                        placeholder="Nhập giờ kết thúc">
+                        placeholder="Nhập giờ kết thúc" required>
                 </div>
             </div>
             <!-- Nhập loại lỗi -->
@@ -111,7 +113,7 @@
             <div class="row">
                 <div class="form-group">
                     <label for="">Loại lỗi/Problem</label>
-                    <select class="form-control" name="Issue" id="defect">
+                    <select class="form-control" name="Issue" id="defect" required>
                         <option value="">Chọn vấn đề</option>
                         <option value="Bỏ mũi/Skip stitch">1. Bỏ mũi/Skip stitch</option>
                         <option value="Đức chỉ/Broken stitch">2. Đức chỉ/Broken stitch</option>
@@ -124,8 +126,8 @@
                         <option value="Vệ sinh dầu/Oil cleanning">9. Vệ sinh dầu/Oil cleanning</option>
                         <option value="Thay đổi thiết bị/Change parts">10. Thay đổi thiết bị/Change parts</option>
                         <option value="Bể vải/Hole">11. Bể vải/Hole</option>
-                        <option value="Dơ/Stain">12. Dơ/Stain</option>                     
-                        
+                        <option value="Dơ/Stain">12. Dơ/Stain</option>
+
                     </select>
                 </div>
             </div>
@@ -140,11 +142,38 @@
             <div class="row">
                 <button type="submit" id="btn" class="btn">Cập Nhật</button>
             </div>
-            <div class="row">
-                <iframe id="iframe"
-                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9dWBrQmFL_6CaSW7AKcqTyvm4vdY0ivvlPG4k3HJ26nnlONarzK6EKjc9mEQu3p9antQKlIZwdo6v/pubhtml?widget=true&amp;headers=false"></iframe>
+
+
+            <!-- <div class="row">
+                <div id="id=headerfix">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>MSNV</th>
+                                <th>Line</th>
+                                <th>MEC_ID</th>
+                                <th>Start</th>
+                                <th>End</th>
+                                <th>Issue</th>
+                                <th>Others</th>
+                                <th>Repair time</th>
+                                <th>Mechanic</th>
+                                <th>Factory</th>
+                                <th>Type of machine</th>
+                                <th>Machine model</th>
+                                <th>machine seri</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div> -->
+
+                <iframe id="preview-frame"
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9dWBrQmFL_6CaSW7AKcqTyvm4vdY0ivvlPG4k3HJ26nnlONarzK6EKjc9mEQu3p9antQKlIZwdo6v/pubhtml?widget=true&amp;headers=false">
+
+                </iframe>
             </div>
-            
+
         </form>
 
 
@@ -183,11 +212,15 @@
                         <option value="">Chọn vấn đề</option>
                         <option value="Kiểm tra ổ máy/Case checking">1. Kiểm tra ổ máy/Case checking</option>
                         <option value="Kiểm tra bàn lừa/Feedog checking">2. Kiểm tra bàn lừa/Feedog checking</option>
-                        <option value="Kiểm tra trụ kim/Needle bar checking">3. Kiểm tra trụ kim/Needle bar checking</option>
-                        <option value="Kiểm tra mặt nguyệt/Haft moon checking">4. Kiểm tra mặt nguyệt/Haft moon checking</option>
-                        <option value="Kiểm tra vị trí dầu/Oil level checking">5. Kiểm tra vị trí dầu/Oil level checking</option>
-                        <option value="Kiểm tra dầu máy/Oil leak checking">6. Kiểm tra dầu máy/Oil leak checking</option>
-                        <option value="Kiểm tra mô tơ/Motor checking">7. Kiểm tra mô tơ/Motor checking</option>                      
+                        <option value="Kiểm tra trụ kim/Needle bar checking">3. Kiểm tra trụ kim/Needle bar checking
+                        </option>
+                        <option value="Kiểm tra mặt nguyệt/Haft moon checking">4. Kiểm tra mặt nguyệt/Haft moon checking
+                        </option>
+                        <option value="Kiểm tra vị trí dầu/Oil level checking">5. Kiểm tra vị trí dầu/Oil level checking
+                        </option>
+                        <option value="Kiểm tra dầu máy/Oil leak checking">6. Kiểm tra dầu máy/Oil leak checking
+                        </option>
+                        <option value="Kiểm tra mô tơ/Motor checking">7. Kiểm tra mô tơ/Motor checking</option>
                     </select>
                 </div>
             </div>
@@ -205,12 +238,11 @@
             </div>
         </form>
         <div class="row">
-                <h6><i class="fas fa-user-tie" style="margin: 5px 3px; color:white;font-size: 13px;"></i>IE.Khapham
-                    <i class="fas fa-phone" style="margin: 5px 3px; color:white;font-size: 13px;"></i> 0355210716 <i
-                        class="far fa-envelope"
-                        style="margin: 5px 3px; color:white; font-size: 13px;"></i>pmkha92@gmail.com
-                </h6>
-            </div>
+            <h6><i class="fas fa-user-tie" style="margin: 5px 3px; color:white;font-size: 13px;"></i>IE.Khapham
+                <i class="fas fa-phone" style="margin: 5px 3px; color:white;font-size: 13px;"></i> 0355210716 <i
+                    class="far fa-envelope" style="margin: 5px 3px; color:white; font-size: 13px;"></i>pmkha92@gmail.com
+            </h6>
+        </div>
     </div>
     <script type="text/javascript">
         function showDiv(select) {
@@ -226,4 +258,5 @@
         } 
     </script>
 </body>
+
 </html>
