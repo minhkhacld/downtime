@@ -168,16 +168,17 @@
                     </table>
                 </div> -->
 
-                <iframe id="preview-frame"
-                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9dWBrQmFL_6CaSW7AKcqTyvm4vdY0ivvlPG4k3HJ26nnlONarzK6EKjc9mEQu3p9antQKlIZwdo6v/pubhtml?widget=true&amp;headers=false">
+            <iframe id="preview-frame"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9dWBrQmFL_6CaSW7AKcqTyvm4vdY0ivvlPG4k3HJ26nnlONarzK6EKjc9mEQu3p9antQKlIZwdo6v/pubhtml?widget=true&amp;headers=false">
 
-                </iframe>
-            </div>
+            </iframe>
+    </div>
 
-        </form>
+    </form>
 
 
-        <!-- Form Schedule Maintanance -->
+    <!-- Form Schedule Maintanance -->
+    <div class="container">
         <form action="https://script.google.com/macros/s/AKfycbz819Gq_V1E4_nmxH7HGtRxNepU_wl0kKqyQpMa24r6HJW979A/exec"
             method="GET" id="formschedule" name="formschedule" style="display:none">
             <!-- Nhập ID -->
@@ -185,7 +186,7 @@
                 <div class="form-group">
                     <label for="">MSNV/Mechanic ID</label>
                     <input type="text" class="form-control" name="Msnv" id="msnv" aria-describedby="helpId"
-                        placeholder="Nhập ID">
+                        placeholder="Nhập ID" required>
                 </div>
             </div>
             <!-- Nhập line -->
@@ -193,7 +194,7 @@
                 <div class="form-group">
                     <label for="">Tên Chuyền/Line</label>
                     <input type="text" class="form-control" name="Line" id="line" aria-describedby="helpId"
-                        placeholder="Nhập số chuyền">
+                        placeholder="Nhập số chuyền" required>
                 </div>
             </div>
             <!-- Nhập STT máy -->
@@ -201,14 +202,14 @@
                 <div class="form-group">
                     <label for="">Số thứ tự máy/MC #ID</label>
                     <input type="text" class="form-control" name="Machine_id" id="mc_id" aria-describedby="helpId"
-                        placeholder="Nhập số thứ tự">
+                        placeholder="Nhập số thứ tự" required>
                 </div>
             </div>
             <!-- Problem -->
             <div class="row">
                 <div class="form-group">
                     <label for="">Loại kiểm tra/Type of checking</label>
-                    <select class="form-control" name="Issue" id="defect">
+                    <select class="form-control" name="Issue" id="defect" required>
                         <option value="">Chọn vấn đề</option>
                         <option value="Kiểm tra ổ máy/Case checking">1. Kiểm tra ổ máy/Case checking</option>
                         <option value="Kiểm tra bàn lừa/Feedog checking">2. Kiểm tra bàn lừa/Feedog checking</option>
@@ -237,12 +238,14 @@
                 <button type="submit" id="btn" class="btn">Cập Nhật</button>
             </div>
         </form>
-        <div class="row">
-            <h6><i class="fas fa-user-tie" style="margin: 5px 3px; color:white;font-size: 13px;"></i>IE.Khapham
-                <i class="fas fa-phone" style="margin: 5px 3px; color:white;font-size: 13px;"></i> 0355210716 <i
-                    class="far fa-envelope" style="margin: 5px 3px; color:white; font-size: 13px;"></i>pmkha92@gmail.com
-            </h6>
-        </div>
+    </div>
+
+    <div class="row">
+        <h6><i class="fas fa-user-tie" style="margin: 5px 3px; color:white;font-size: 13px;"></i>IE.Khapham
+            <i class="fas fa-phone" style="margin: 5px 3px; color:white;font-size: 13px;"></i> 0355210716 <i
+                class="far fa-envelope" style="margin: 5px 3px; color:white; font-size: 13px;"></i>pmkha92@gmail.com
+        </h6>
+    </div>
     </div>
     <script type="text/javascript">
         function showDiv(select) {
@@ -252,7 +255,7 @@
                 document.getElementById('test-form').style.display = "block";
                 document.getElementById('formschedule').style.display = "none";
             } else {
-                document.getElementById('formschedule').style.display = "block";
+                document.getElementById('formschedule').style.display = "block";                
                 document.getElementById('test-form').style.display = "none";
             }
         } 
