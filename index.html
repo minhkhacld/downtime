@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DOWNTIME COLLECTION</title>
+    <link rel="icon" type="image/x-icon" href="./picture/favicon.ico"/>
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-3.4.1-dist/css/bootstrap.css">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <!-- 
     Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -25,34 +28,28 @@
         crossorigin="anonymous"></script>
     <link href="/open-iconic/font/css/open-iconic.css" rel="stylesheet">
     </style>
-
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- <div class="container-fluid">
-        
-         <div class="row" class="nar-bar">
-            <ul class="limenu">
-                <li><a class="active" href="http://minhkhacld.github.io/downtime">Home</a></li>
-                <li><a href="http://minhkhacld.github.io/qco">QCO</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </div> -->
 
+    <div class="container" id="header">
+        <div class="row">  
+            <div class="col">
+                    <h1><i class="fa fa-cogs" aria-hidden="true"></i> DOWNTIME COLL APP</h1>
+            </div>      
+            
+        </div>
+    </div>
 
     <div class="container">
-
-        <div class="row" class="header">
-            <!-- <img src="https://drive.google.com/file/d/1A-G9-h-mUZru45yK-RfcCWzfpseIBX-S/view?usp=sharing" alt=""> -->
-            <h1>DOWNTIME COLL APP</h1>
-        </div>
         <div class="row">
             <div class="form-group">
-                <label for="">Loại cập nhật</label>
+                <label for=""><i class="fa fa-star" aria-hidden="true"></i> Loại cập nhật</label>
                 <select class="form-control" name="" id="typeupdate" onchange="showDiv(this)" required>
-                    <option value="repair">Sửa máy/Fix Machine</option>
-                    <option value="schedule">Bảo trì định kỳ/Shedule Maintanance</option>
+                    <option value="repair"><i class="fa fa-wrench" aria-hidden="true"></i> Sửa máy/Fix Machine</option>
+                    <option value="schedule"><i class="fa fa-columns" aria-hidden="true"></i> Bảo trì định kỳ/Shedule
+                        Maintanance</option>
                 </select>
             </div>
         </div>
@@ -65,7 +62,7 @@
             <!-- Nhập ID -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">MSNV/Mechanic ID</label>
+                    <label for=""><i class="fa fa-id-card" aria-hidden="true"></i> MSNV/Mechanic ID</label>
                     <input type="text" class="form-control" name="Msnv" id="msnv" aria-describedby="helpId"
                         placeholder="Nhập ID" required>
                 </div>
@@ -73,7 +70,7 @@
             <!-- Nhập line -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">Tên Chuyền/Line</label>
+                    <label for=""><i class="fa fa-map-marker" aria-hidden="true"></i> Tên Chuyền/Line</label>
                     <input type="text" class="form-control" name="Line" id="line" aria-describedby="helpId"
                         placeholder="Nhập số chuyền" required>
                 </div>
@@ -81,7 +78,7 @@
             <!-- Nhập STT máy -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">Số thứ tự máy/MC #ID</label>
+                    <label for=""><i class="fa fa-list-ol" aria-hidden="true"></i> Số thứ tự máy/MC #ID</label>
                     <input type="text" class="form-control" name="Machine_id" id="mc_id" aria-describedby="helpId"
                         placeholder="Nhập số thứ tự" required>
                 </div>
@@ -89,7 +86,7 @@
             <!-- Nhập Thời gian bắt đầu -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">Bắt đầu/Start (Vd: 10:25 AM)</label>
+                    <label for=""><i class="fa fa-play" aria-hidden="true"></i> Bắt đầu/Start (Vd: 10:25 AM)</label>
                     <input type="time" class="form-control" name="Start" id="start" aria-describedby="helpId"
                         placeholder="Nhập giờ bắt đầu" required>
                 </div>
@@ -97,7 +94,8 @@
             <!-- Nhập Thời gian kết thúc -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">Kết thúc/End (Vd: 10:50 AM)</label>
+                    <label for=""><i class="fa fa-stop-circle" aria-hidden="true"></i> Kết thúc/End (Vd: 10:50
+                        AM)</label>
                     <input type="time" class="form-control" name="End" id="end" aria-describedby="helpId"
                         placeholder="Nhập giờ kết thúc" required>
                 </div>
@@ -112,7 +110,7 @@
             </div> -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">Loại lỗi/Problem</label>
+                    <label for=""><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Loại lỗi/Problem</label>
                     <select class="form-control" name="Issue" id="defect" required>
                         <option value="">Chọn vấn đề</option>
                         <option value="Bỏ mũi/Skip stitch">1. Bỏ mũi/Skip stitch</option>
@@ -133,7 +131,8 @@
             </div>
             <div class="row">
                 <div class="form-group">
-                    <label for="">Vấn đề cho máy khác không phải máy may</label>
+                    <label for=""><i class="fa fa-info" aria-hidden="true"></i> Vấn đề cho máy khác không phải máy
+                        may</label>
                     <textarea class="form-control" name="Others" id="" rows="3"
                         placeholder="Nhập vấn đề khác"></textarea>
                 </div>
@@ -142,47 +141,16 @@
             <div class="row">
                 <button type="submit" id="btn" class="btn">Cập Nhật</button>
             </div>
+        </form>
 
+        <!-- Form Schedule Maintanance -->
 
-            <!-- <div class="row">
-                <div id="id=headerfix">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Timestamp</th>
-                                <th>MSNV</th>
-                                <th>Line</th>
-                                <th>MEC_ID</th>
-                                <th>Start</th>
-                                <th>End</th>
-                                <th>Issue</th>
-                                <th>Others</th>
-                                <th>Repair time</th>
-                                <th>Mechanic</th>
-                                <th>Factory</th>
-                                <th>Type of machine</th>
-                                <th>Machine model</th>
-                                <th>machine seri</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div> -->
-
-            <!-- <iframe id="preview-frame"
-                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9dWBrQmFL_6CaSW7AKcqTyvm4vdY0ivvlPG4k3HJ26nnlONarzK6EKjc9mEQu3p9antQKlIZwdo6v/pubhtml?widget=true&amp;headers=false">
-
-            </iframe> -->
-    </div>
-    </form>
-
-    <!-- Form Schedule Maintanance -->
-    <div class="container">
         <form action="https://script.google.com/macros/s/AKfycbz819Gq_V1E4_nmxH7HGtRxNepU_wl0kKqyQpMa24r6HJW979A/exec"
             method="GET" id="formschedule" name="formschedule" style="display:none">
             <!-- Nhập ID -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">MSNV/Mechanic ID</label>
+                    <label for=""><i class="fa fa-id-card" aria-hidden="true"></i> MSNV/Mechanic ID</label>
                     <input type="text" class="form-control" name="Msnv" id="msnv" aria-describedby="helpId"
                         placeholder="Nhập ID" required>
                 </div>
@@ -190,7 +158,7 @@
             <!-- Nhập line -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">Tên Chuyền/Line</label>
+                    <label for=""><i class="fa fa-map-marker" aria-hidden="true"></i> Tên Chuyền/Line</label>
                     <input type="text" class="form-control" name="Line" id="line" aria-describedby="helpId"
                         placeholder="Nhập số chuyền" required>
                 </div>
@@ -198,7 +166,7 @@
             <!-- Nhập STT máy -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">Số thứ tự máy/MC #ID</label>
+                    <label for=""><i class="fa fa-list-ol" aria-hidden="true"></i> Số thứ tự máy/MC #ID</label>
                     <input type="text" class="form-control" name="Machine_id" id="mc_id" aria-describedby="helpId"
                         placeholder="Nhập số thứ tự" required>
                 </div>
@@ -206,7 +174,8 @@
             <!-- Problem -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">Loại kiểm tra/Type of checking</label>
+                    <label for=""><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Loại kiểm tra/Type of
+                        checking</label>
                     <select class="form-control" name="Issue" id="defect" required>
                         <option value="">Chọn vấn đề</option>
                         <option value="Kiểm tra tất cả">1. Kiểm tra tất cả</option>
@@ -227,7 +196,8 @@
             <!-- Remark -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">Vấn đề cho máy khác không phải máy may</label>
+                    <label for=""><i class="fa fa-info" aria-hidden="true"></i> Vấn đề cho máy khác không phải máy
+                        may</label>
                     <textarea class="form-control" name="Others" id="" rows="3"
                         placeholder="Nhập vấn đề khác"></textarea>
                 </div>
@@ -236,23 +206,39 @@
             <div class="row">
                 <button type="submit" id="btn" class="btn">Cập Nhật</button>
             </div>
+
         </form>
-
-
-    </div>
-    </div>
-    <a padding="50%"
-        href="https://docs.google.com/spreadsheets/d/1ZPBMm2Ee-qsGUbAyp7611wofziPgvdQe2VOgXkbWWjQ/edit#gid=768451531">Xem
-        kết quả tại đây</a>
-    <div class="row">
-
         <div class="row">
-            <h6><i class="fas fa-user-tie" style="margin: 5px 3px; color:white;font-size: 13px;"></i>IE.Khapham
-                <i class="fas fa-phone" style="margin: 5px 3px; color:white;font-size: 13px;"></i> 0355210716 <i
-                    class="far fa-envelope" style="margin: 5px 3px; color:white; font-size: 13px;"></i>pmkha92@gmail.com
-            </h6>
+            
+            <div class="col">
+                <a href="https://docs.google.com/spreadsheets/d/1ZPBMm2Ee-qsGUbAyp7611wofziPgvdQe2VOgXkbWWjQ/edit#gid=768451531">Xem
+                    kết quả tại đây</a>
+            </div>
+            
         </div>
     </div>
+
+    <div class="container">       
+        <div class="row">
+            <div class="col">
+                <div class="social-icons">
+                    <a class="social-icon" href="https://www.linkedin.com/in/kha-ph%E1%BA%A1m-minh-58aa68153/"><i
+                            class="fab fa-linkedin-in"></i></a><a class="social-icon"
+                        href="https://www.instagram.com/minhkhacld/"><i class="fab fa-instagram"></i></a><a
+                        class="social-icon" href="https://www.facebook.com/phamminh.kha"><i
+                            class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="footer">
+                Ứng dụng được viết bởi phòng IE - Kha.<br/>
+                 Tel: 0355210716, Email: pmkha92@gmail.com. <br/>
+                ©Khapham 2020. All rights reserved.
+            </div>
+        </div>
+    </div>
+
     <script type="text/javascript">
         function showDiv(select) {
             // var typeupdate = document.getElementById('typeupdate').value
